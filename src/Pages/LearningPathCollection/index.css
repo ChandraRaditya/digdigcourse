@@ -1,0 +1,23 @@
+.learning-path-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.learning-path-list-wrapper{
+    margin: 64px 0px 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* border: 1px solid #000; */
+} 
+
+.banner .banner-img{
+    margin-top: 50px;
+    width: 1215px;
+    height: 599px;
+    margin-bottom: 50px;
+}
+
+/* ====Respondsive =====*/
