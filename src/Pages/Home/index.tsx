@@ -1,7 +1,9 @@
+import "./index.css";
+
 function Home() {
   return (
     <div>
-      <h1>hello</h1>
+      <h1>Hallo semuanya Home</h1>
     </div>
   );
 }
