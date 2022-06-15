@@ -11,7 +11,10 @@ function AppRoute() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/learning-path-collection"></Route>
+          <Route
+            path="/learning-path-collection"
+            component={LearningPath}
+          ></Route>
           <Route path="/learning-path" component={LearningPath} />
         </Switch>
       </div>
