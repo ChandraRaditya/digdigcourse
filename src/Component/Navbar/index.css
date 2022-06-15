@@ -1,0 +1,38 @@
+.page-head {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 48px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.page-head .logo {
+    width: 201px;
+    height: 100px;
+}
+
+nav ul {
+    height: 100px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 32px;
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.react-route-link {
+    color: black;
+    text-decoration: none;
+}
