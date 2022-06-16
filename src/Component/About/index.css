@@ -1,0 +1,38 @@
+.card-wrapper{
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    max-width: 833px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 46px;
+    margin-bottom: 36px;
+
+}
+.card-about{
+    text-align: left;
+    border-radius: 10px;
+
+}
+.title-about{
+    font-size: 20px;
+    color: #242F9B;
+    font-style: Semibold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'IBM Plex Sans';
+}
+ul{
+    margin-left: 30px;
+}
+
+.desc-about p{
+    font-size: 16px;
+    color: #000000;
+
+}
+.title-list{
+    font-size:16px;
+
+}
+
