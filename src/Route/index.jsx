@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Footer from "../Component/Footer";
 import Navbar from "../Component/Navbar";
 import Home from "../Pages/Home";
 import LearningPath from "../Pages/LearningPath";
@@ -7,8 +8,8 @@ import LearningPath from "../Pages/LearningPath";
 function AppRoute() {
   return (
     <Router>
-      <div>
-        <Navbar />
+      <Navbar />
+      <main>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route
@@ -17,7 +18,8 @@ function AppRoute() {
           ></Route>
           <Route path="/learning-path" component={LearningPath} />
         </Switch>
-      </div>
+      </main>
+      <Footer />
     </Router>
   );
 }
