@@ -58,7 +58,7 @@ function Home() {
       </div>
       <div className="bottom-section">
         <div className="bottom-section-container">
-          <div className="image-container">
+          <div className="bottom-section-image-container">
             <img src="" alt="" />
           </div>
           <div className="bottom-content-container">
@@ -67,7 +67,9 @@ function Home() {
               Tambah ilmu serta pengetahuan tentang programming. Kamu bisa pilih
               Learning Path Yang di inginkan
             </p>
-            <div className="bottom-content-button">Lihat Selengkapnya</div>
+            <button className="bottom-content-button">
+              Lihat Selengkapnya
+            </button>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "../Component/Footer";
 import Navbar from "../Component/Navbar";
+import Course from "../Pages/Course";
 import Home from "../Pages/Home";
 import LearningPath from "../Pages/LearningPath";
 
@@ -13,6 +14,7 @@ function AppRoute() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/learning-path/:id" component={LearningPath} />
+          <Route path="/course" component={Course} />
         </Switch>
       </main>
       <Footer />
