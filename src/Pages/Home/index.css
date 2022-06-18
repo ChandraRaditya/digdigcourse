@@ -1,0 +1,104 @@
+.banner {
+    width: 100%;
+    height: 558px;
+    background: linear-gradient(180deg, #1E2568 0%, #37698E 100%);
+}
+
+.banner-content-container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cover-text-container {
+    color: white;
+}
+
+.cover-container {
+    height: 246px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.cover-text-container {
+    text-align: left;
+    max-width: 431px;
+    width: 100%;
+    margin-right: 223px;
+    margin-top: 38px;
+}
+
+.cover-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+
+.cover-text {
+    max-width: 331px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.keuntungan-box {
+    background: #DBDFFD;
+    border-radius: 10px;
+    max-width: 1092px;
+    width: 100%;
+    height: 258px;
+    margin: 0 auto;
+    padding: 13px 24px;
+}
+
+.keuntungan-box .keuntungan-title {
+    font-style: normal;
+    width: 1030px;
+    height: 36px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
+    color: #000000;
+    border-bottom: 1px solid #DA1919;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    margin-bottom: 19px;
+}
+
+.keuntungan-container {
+    max-width: 1030px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keuntungan-item {
+    background: #EFF2F6;
+    border-radius: 10px;
+    width: 229px;
+    height: 137px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.keuntungan-item p {
+    width: 161px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.keuntungan-item .text-color {
+    color: #242F9B;
+}
