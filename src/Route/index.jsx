@@ -12,10 +12,6 @@ function AppRoute() {
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route
-            path="/learning-path-collection"
-            component={LearningPath}
-          ></Route>
           <Route path="/learning-path/:id" component={LearningPath} />
         </Switch>
       </main>
