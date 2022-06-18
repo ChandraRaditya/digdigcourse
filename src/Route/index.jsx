@@ -16,7 +16,7 @@ function AppRoute() {
             path="/learning-path-collection"
             component={LearningPath}
           ></Route>
-          <Route path="/learning-path" component={LearningPath} />
+          <Route path="/learning-path/:id" component={LearningPath} />
         </Switch>
       </main>
       <Footer />
