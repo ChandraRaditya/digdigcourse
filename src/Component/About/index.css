@@ -26,7 +26,7 @@ ul{
     margin-left: 30px;
 }
 
-.desc-about p{
+.desc-about{
     font-size: 16px;
     color: #000000;
 
@@ -34,5 +34,30 @@ ul{
 .title-list{
     font-size:16px;
 
+}
+
+@media screen and (max-width:768px) {
+    .card-wrapper {
+        height: auto;
+        margin: 0 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .title-about{
+        font-size: 15px;
+    }
+
+    .desc-about{
+        font-size: 12px;
+    }
+
+    .title-list{
+        font-size: 13px;
+    }
+
+    ul{
+        margin-left: 20px;
+    }
 }
 

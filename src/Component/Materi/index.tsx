@@ -8,10 +8,6 @@ function Materi() {
         <div className='card-wrapper'>
             <h2 className='sub-title'>Materi</h2>
             <ListMateri />
-            <ListMateri />
-            <ListMateri />
-            <ListMateri />
-            <ListMateri />
 
         </div>
     </div>
