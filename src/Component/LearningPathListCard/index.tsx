@@ -2,14 +2,13 @@ import './index.css';
 import Button from '../Button'
 
 interface IProps {
+  id: number,
   desc: string;
   title: string;
   img: string;
 }
 
-const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
-
-  
+const LearnPathCard: React.FC<IProps> = ({ title, desc, img, id}) => {
 
   return (
     <div className="card-wrapper">
@@ -23,7 +22,7 @@ const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
         </div>
       </div>
       <div className="card-footer">
-        <Button desc='Selengkapnya' link='learning-path' />
+        <Button desc='Selengkapnya' link={`/learning-path/${id}`} />
       </div>
     </div>
   );

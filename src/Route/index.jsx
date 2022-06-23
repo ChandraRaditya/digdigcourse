@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "../Component/Navbar";
 import Home from "../Pages/Home";
 import LearningPathCollection from "../Pages/LearningPathCollection";
-import  LearningPath from "../Pages/LearningPath";
+import LearningPath from "../Pages/LearningPath";
+import Course from "../Pages/Course";
 
 function AppRoute() {
   return (
@@ -13,7 +14,8 @@ function AppRoute() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/learning-path-collection" component={LearningPathCollection}></Route>
-          <Route path="/learning-path"  component={LearningPath}/>
+          <Route path="/learning-path/:id"  component={LearningPath}/>
+          <Route path="/course" component={Course}/>
         </Switch>
       </div>
     </Router>

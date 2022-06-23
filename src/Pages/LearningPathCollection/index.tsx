@@ -2,8 +2,6 @@ import './index.css';
 import LearnPathCard from "../../Component/LearningPathListCard";
 import Banner from "../../Assets/Images/BannerLearnPath.png";
 import Track  from "../../Component/Data";
-// import Img from "../../Assets/Images/BannerLearnPath.png";
-
 
 function LearningPathCollection() {
   return (
@@ -18,6 +16,7 @@ function LearningPathCollection() {
             title={item.name}
             desc={item.description}
             img={item.image}
+            id={item.id}
           />
         ))}
       </div>
