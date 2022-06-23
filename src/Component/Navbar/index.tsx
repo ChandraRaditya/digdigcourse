@@ -17,7 +17,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/learning-path" className="react-route-link">
+              <Link to="/learning-path-collection" className="react-route-link">
                 Course
               </Link>
             </li>
