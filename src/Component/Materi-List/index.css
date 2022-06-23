@@ -1,0 +1,37 @@
+.card-list{
+    border-radius: 10px;
+    background-color: #E0E4F3;
+    max-width: 793px;
+    padding: 10px;
+    margin: 12px 0;
+}
+.card-button{
+    max-width: 85px;
+    border-radius: 5px;
+    border: 0.4px solid #5779F1;
+    padding: 7px 0;
+}
+
+.card-button p{
+    color:  #5779F1;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    font-size: 12px;
+}
+
+@media screen and (max-width:768px) {
+    .card-list{
+        padding: 8px;
+        border-radius: 8px;
+    }
+    .card-button{
+        max-width: 65px;
+        padding: 5px;
+    }
+
+    .card-button p{
+        font-size: 10px;
+    }
+    
+}
