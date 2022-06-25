@@ -1,0 +1,31 @@
+{
+    "type": "detailed-courses",
+    "Courses": [
+        {
+            "id": "11",
+            "imgUrl": "path/to/img.jpg",
+            "courseName": "HTML",
+            "level": "pemula",
+            "hours": "16",
+            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare eros egestas odio auctor, in malesuada dui imperdiet. Curabitur faucibus rhoncus justo nec mattis. Nunc hendrerit ante urna, quis tempus elit dictum nec. Donec auctor odio quis lacus ultricies vehicula. Maecenas rhoncus commodo blandit. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis hendrerit ullamcorper neque. In hendrerit tristique vehicula.",
+            "requirement": [
+                "Laptop macbook pro",
+                "waktu 40 jam selama 1 minggu 5 hari kerja"
+            ],
+            "materials": [
+                {
+                    "id": "111",
+                    "title": "Perkenalan Kelas" 
+                },
+                {
+                    "id": "112",
+                    "title": "Apa itu HTML?" 
+                },
+                {
+                    "id": "113",
+                    "title": "HTML Dasar Dari Web Dev" 
+                }
+            ]
+        }
+    ]
+}

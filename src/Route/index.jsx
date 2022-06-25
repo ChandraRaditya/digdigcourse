@@ -6,6 +6,7 @@ import Course from "../Pages/Course";
 import Home from "../Pages/Home";
 import LearningPathCollection from "../Pages/LearningPathCollection";
 import LearningPath from "../Pages/LearningPath";
+import CourseDetail from "../Pages/CourseDetail";
 
 function AppRoute() {
   return (
@@ -20,6 +21,7 @@ function AppRoute() {
           ></Route>
           <Route path="/learning-path/:id" component={LearningPath} />
           <Route path="/course" component={Course} />
+          <Route path="/course-detail" component={CourseDetail} />
         </Switch>
       </main>
       <Footer />

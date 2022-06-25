@@ -1,0 +1,36 @@
+{
+    "type": "detailed-materials",
+    "materials": [
+        {
+            "id": "111",
+            "title": "Perkenalan Kelas",
+            "type": "article",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare eros egestas odio auctor, in malesuada dui imperdiet. Curabitur faucibus rhoncus justo nec mattis. Nunc hendrerit ante urna, quis tempus elit dictum nec. Donec auctor odio quis lacus ultricies vehicula. Maecenas rhoncus commodo blandit. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis hendrerit ullamcorper neque. In hendrerit tristique vehicula. Nullam nec tincidunt elit. Sed tincidunt lorem sollicitudin mi mattis faucibus. Nulla aliquam eu sem vel rhoncus. Duis efficitur posuere fermentum. Etiam ut leo sit amet nulla finibus consequat sit amet id diam. Aliquam erat volutpat. Curabitur a gravida felis. Cras eu ultrices justo. Praesent accumsan vulputate ornare. Curabitur suscipit venenatis ligula. Praesent eu consectetur tortor. Sed ut ipsum pellentesque, eleifend augue eu, malesuada arcu. Donec euismod mauris rhoncus mi posuere, finibus volutpat sapien fringilla. Duis mi est, sagittis at tortor id, dignissim pellentesque magna. Vestibulum bibendum, nunc ac porta semper, enim mi fermentum magna, eu rhoncus mauris elit dapibus dui. Nunc porta eros eget libero tempor, eu vulputate urna placerat. Sed non quam in ante ultricies auctor. Praesent placerat bibendum dui, vitae pellentesque diam. Sed ultricies egestas aliquet. Etiam scelerisque id libero sed convallis. Vivamus quis enim ac ante mattis consectetur eu in ex. Quisque vulputate non purus eu pretium. Proin sollicitudin quam erat. Sed sagittis, risus in molestie rutrum, quam sapien cursus risus, nec ultricies metus mauris at quam. Sed et neque sem. Etiam ipsum odio, efficitur at scelerisque ut, fringilla sit amet mauris. Sed sit amet tincidunt sem, eu mattis augue. In non elit nisi. Aenean sed augue sit amet leo posuere aliquam sit amet at nulla. In eu turpis imperdiet, cursus mi sed, auctor justo. Maecenas consequat id velit vel porta. Etiam congue leo at libero eleifend bibendum. Fusce imperdiet purus vitae sagittis semper. Duis viverra, nisl et convallis scelerisque, elit ante molestie nulla, sed auctor purus ex nec libero. Mauris scelerisque eu eros nec varius. Fusce egestas porta mi quis varius. Nam tristique massa quis fringilla pretium"
+        },
+        {
+            "id": "112",
+            "title": "Apa itu HTML?",
+            "type": "quiz",
+            "question": "Kenapa HTML Penting?",
+            "listOfAnswer": [
+                {
+                    "answerId": "112A",
+                    "label": "Karena Sering dipakai di backend development"
+                },
+                {
+                    "answerId": "112B",
+                    "label": "Sebagai Text protocol yang dapat menampilkan data yang ingin ditampilkan pada website"
+                },
+                {
+                    "answerId": "112C",
+                    "label": "karena merupakan bahasa pemrograman web development"
+                },
+                {
+                    "answerId": "112D",
+                    "label": "semua jawaban salah"
+                }
+            ],
+            "correctAnswer": "112B"
+        }
+    ]
+}

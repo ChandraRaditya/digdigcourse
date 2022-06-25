@@ -115,6 +115,13 @@
     width: 100%;
 }
 
+.card-home-component-container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .card-home-container .card-home-title {
     font-style: normal;
     font-weight: 700;

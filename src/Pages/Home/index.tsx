@@ -1,7 +1,37 @@
 import "./index.css";
 import CardHome from "../../Component/CardHome";
+import { useEffect, useState } from "react";
+import { getData } from "../../Helper/getData";
+import { List } from "../../Helper/interface";
+import bottomImage from "../../Assets/Images/home-content.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
+  const [learningPath, setLearningPath] = useState([]);
+
+  useEffect(() => {
+    getData()
+      .then((response: any) => {
+        setLearningPath(response["LearningPath"].List);
+      })
+      .catch((e: any) => console.log("Error", e));
+  }, []);
+
+  const cardContent = learningPath?.map((x: List) => {
+    return (
+      <CardHome
+        key={x.id}
+        learningPathName={x.learningPathName}
+        info={x.info}
+        hours={x.hours}
+        level={x.level}
+        id={""}
+        imgUrl={x.imgUrl}
+        courses={x.courses} // courseCount={x.courses.length}
+      />
+    );
+  });
+
   return (
     <div className="Home-page-section">
       <div className="banner">
@@ -53,13 +83,13 @@ function Home() {
           <p className="card-home-title">
             Kelas DigDigCourse Berbasis Industri
           </p>
-          <CardHome />
+          <div className="card-home-component-container">{cardContent}</div>
         </div>
       </div>
       <div className="bottom-section">
         <div className="bottom-section-container">
           <div className="bottom-section-image-container">
-            <img src="" alt="" />
+            <img src={bottomImage} alt="" />
           </div>
           <div className="bottom-content-container">
             <h2>Lihat Koleksi Course dari DigDigCourse</h2>
@@ -67,9 +97,11 @@ function Home() {
               Tambah ilmu serta pengetahuan tentang programming. Kamu bisa pilih
               Learning Path Yang di inginkan
             </p>
-            <button className="bottom-content-button">
-              Lihat Selengkapnya
-            </button>
+            <Link to="/learning-path-collection">
+              <button className="bottom-content-button">
+                Lihat Selengkapnya
+              </button>
+            </Link>
           </div>
         </div>
       </div>

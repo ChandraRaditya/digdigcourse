@@ -27,7 +27,8 @@
     display: inline;
     margin: 0 5px;
 }
-p span{
+
+.course-detail-line-box span{
     color:  #FFFFFF;
     text-align: center;
     font-weight: bold;
