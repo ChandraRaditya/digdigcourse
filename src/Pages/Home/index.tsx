@@ -25,7 +25,7 @@ function Home() {
         info={x.info}
         hours={x.hours}
         level={x.level}
-        id={""}
+        id={x.id}
         imgUrl={x.imgUrl}
         courses={x.courses} // courseCount={x.courses.length}
       />

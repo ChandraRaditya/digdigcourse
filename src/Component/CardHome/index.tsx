@@ -9,8 +9,10 @@ function CardHome({
   level,
   imgUrl,
   courses,
+  id,
 }: List) {
   const urlName = learningPathName.replace(/\s/g, "-");
+
   return (
     <div className="card-home">
       <div className="image-container">
@@ -24,7 +26,11 @@ function CardHome({
           <div className="little-box">{hours}</div>
           <div className="little-box">{level}</div>
         </div>
-        <Button desc={"Selengkapnya"} link={`/learning-path/${urlName}`} />
+        <Button
+          desc={"Selengkapnya"}
+          link={`/learning-path/${urlName}`}
+          id={id}
+        />
       </div>
     </div>
   );
