@@ -1,5 +1,5 @@
-.card-wrapper{
-    padding: 10px;
+.course-detail-card-wrapper {
+    padding: 20px;
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 10px;
     max-width: 833px;
@@ -7,14 +7,13 @@
     margin: 0 auto;
     margin-top: 46px;
     margin-bottom: 36px;
-
 }
-.card-about{
+.course-detail-card-wrapper .card-about {
     text-align: left;
     border-radius: 10px;
 
 }
-.title-about{
+.course-detail-card-wrapper.title-about {
     font-size: 20px;
     color: #242F9B;
     font-style: Semibold;
@@ -22,18 +21,18 @@
     margin-bottom: 10px;
     font-family: 'IBM Plex Sans';
 }
-ul{
+
+.course-detail-card-wrapper ul {
     margin-left: 30px;
 }
 
-.desc-about{
+.course-detail-card-wrapper .desc-about{
     font-size: 16px;
     color: #000000;
-
+    margin-bottom: 52px;
 }
-.title-list{
+.course-detail-card-wrapper .title-list{
     font-size:16px;
-
 }
 
 @media screen and (max-width:768px) {

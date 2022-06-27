@@ -2,13 +2,13 @@ import "./index.css";
 import Button from "../Button";
 
 interface IProps {
-  id: number;
   desc: string;
   title: string;
   img: string;
 }
 
-const LearnPathCard: React.FC<IProps> = ({ title, desc, img, id }) => {
+const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
+  const urlName = title.toLowerCase().replace(/\s/g, "-");
   return (
     <div className="card-wrapper">
       <div className="card-body">
@@ -21,7 +21,7 @@ const LearnPathCard: React.FC<IProps> = ({ title, desc, img, id }) => {
         </div>
       </div>
       <div className="card-footer">
-        <Button desc="Selengkapnya" link={`/learning-path/${id}`} id={""} />
+        <Button desc="Selengkapnya" link={`/learning-path/${urlName}`} />
       </div>
     </div>
   );

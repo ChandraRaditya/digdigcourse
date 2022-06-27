@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import AppRoute from "./Route";
 import LearningPath from "./Data/learningPath.json";
@@ -8,6 +8,13 @@ import { Provider } from "react-redux";
 import store from "./Redux/store";
 
 function App() {
+  // const checkDataObj = localStorage.getItem("obj");
+  const [objData, setObjData] = useState(() => {
+    const saved = localStorage.getItem("obj");
+    const initialValue = JSON.parse(saved || "{}");
+    return initialValue || "";
+  });
+
   useEffect(() => {
     const obj = {
       LearningPath: LearningPath,
@@ -16,9 +23,18 @@ function App() {
     };
 
     if (localStorage.getItem("obj") === null) {
+      window.location.reload();
       localStorage.setItem("obj", JSON.stringify(obj));
     }
+
+    // window.addEventListener("storage", () => {
+    //   localStorage.setItem("obj", JSON.stringify(obj));
+    // });
+
+    // localStorage.setItem("obj", JSON.stringify(obj));
   }, []);
+
+  console.log("ini obj state", objData);
 
   return (
     <Provider store={store}>

@@ -21,7 +21,7 @@ function AppRoute() {
           ></Route>
           <Route path="/learning-path/:id" component={LearningPath} />
           <Route path="/course" component={Course} />
-          <Route path="/course-detail" component={CourseDetail} />
+          <Route path="/course-detail/:id" component={CourseDetail} />
         </Switch>
       </main>
       <Footer />

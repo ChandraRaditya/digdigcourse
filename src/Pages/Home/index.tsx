@@ -1,23 +1,24 @@
 import "./index.css";
 import CardHome from "../../Component/CardHome";
 import { useEffect, useState } from "react";
-import { getData } from "../../Helper/getData";
+import { getListData } from "../../Helper/getData";
 import { List } from "../../Helper/interface";
 import bottomImage from "../../Assets/Images/home-content.jpg";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { learningPathQuery } from "../../Redux/sliceLearningPath";
 
 function Home() {
-  const [learningPath, setLearningPath] = useState([]);
+  const currentData = useSelector((state: any) => state.learningPathData.value);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getData()
-      .then((response: any) => {
-        setLearningPath(response["LearningPath"].List);
-      })
-      .catch((e: any) => console.log("Error", e));
+    dispatch(learningPathQuery(getListData()));
   }, []);
 
-  const cardContent = learningPath?.map((x: List) => {
+  // console.log("ini redux baru", currentData);
+
+  const cardContent = currentData?.map((x: List) => {
     return (
       <CardHome
         key={x.id}

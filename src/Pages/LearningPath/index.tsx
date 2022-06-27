@@ -6,34 +6,32 @@ import CardActions from "@mui/material/CardActions";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import Track from "../../Component/Data";
-import { useParams } from "react-router-dom";
 import Button from "../../Component/Button";
 import CustomChip from "../../Component/Chip";
-import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { getData } from "../../Helper/getData";
-import { List, Course, objectDataType } from "../../Helper/interface";
+import { getListData } from "../../Helper/getData";
+import { List, Course } from "../../Helper/interface";
+import { useParams } from "react-router-dom";
 
 export const Cardcourse = () => {
-  // const { id } = useParams<{ id?: string | undefined }>();
-  const [course, setCourse] = useState([]);
-  const currentId = useSelector((state: any) => state.id.value);
-  console.log("ini id dari redux", currentId);
+  const { id } = useParams<{ id?: string | undefined }>();
+  const [course, setCourse] = useState<List[] | undefined>([]);
+  // const currentId = useSelector((state: any) => state.id.value);
+  // console.log("ini id dari redux", currentId);
+  // console.log("ini id dari url", id);
+  // console.log("ini path", url);
 
   useEffect(() => {
-    getData()
-      .then((response: any) => {
-        const data = response["LearningPath"].List;
-        setCourse(data);
-      })
-      .catch((e: any) => console.log("Error", e));
+    setCourse(getListData());
   }, []);
 
-  const coursesList: List[] = course.filter(
-    (data: List) => data.id === currentId
+  const pathName = id?.replace(/-/g, " ").toLowerCase();
+
+  //perlu perbaikan di type courseListnya
+  const coursesList = course?.filter(
+    (data) => data.learningPathName.toLowerCase() === pathName
   );
-  const courseListData = coursesList[0]?.courses;
+  const courseListData = coursesList?.[0]?.courses;
   return (
     <Box
       sx={{
@@ -90,8 +88,9 @@ export const Cardcourse = () => {
               <CardActions sx={{ padding: 0 }}>
                 <Button
                   desc={"Mulai belajar"}
-                  link={`/course/${data.courseName}`}
-                  id={""}
+                  link={`/course-detail/${data.courseName
+                    .replace(/\s/g, "-")
+                    .toLowerCase()}`}
                 />
               </CardActions>
             </Box>
@@ -103,9 +102,11 @@ export const Cardcourse = () => {
 };
 
 function MediaControlCard() {
+  const { id } = useParams<{ id?: string | undefined }>();
+  const titleH1 = id?.replace(/-/g, " ").toUpperCase();
   return (
     <div className="course-wrapper">
-      <h1 className="title-course">Paket Web Development Pemula</h1>
+      <h1 className="title-course">{titleH1}</h1>
       <Cardcourse />
     </div>
   );

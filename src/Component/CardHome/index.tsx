@@ -11,7 +11,7 @@ function CardHome({
   courses,
   id,
 }: List) {
-  const urlName = learningPathName.replace(/\s/g, "-");
+  const urlName = learningPathName.toLowerCase().replace(/\s/g, "-");
 
   return (
     <div className="card-home">
@@ -26,11 +26,7 @@ function CardHome({
           <div className="little-box">{hours}</div>
           <div className="little-box">{level}</div>
         </div>
-        <Button
-          desc={"Selengkapnya"}
-          link={`/learning-path/${urlName}`}
-          id={id}
-        />
+        <Button desc={"Selengkapnya"} link={`/learning-path/${urlName}`} />
       </div>
     </div>
   );
