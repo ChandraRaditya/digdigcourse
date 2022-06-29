@@ -26,7 +26,7 @@ function CardHome({
           <div className="little-box">{hours}</div>
           <div className="little-box">{level}</div>
         </div>
-        <Button desc={"Selengkapnya"} link={`/learning-path/${urlName}`} />
+        <Button link={`/learning-path/${urlName}`} />
       </div>
     </div>
   );

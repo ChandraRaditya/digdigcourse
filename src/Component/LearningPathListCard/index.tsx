@@ -21,7 +21,7 @@ const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
         </div>
       </div>
       <div className="card-footer">
-        <Button desc="Selengkapnya" link={`/learning-path/${urlName}`} />
+        <Button link={`/learning-path/${urlName}`} />
       </div>
     </div>
   );

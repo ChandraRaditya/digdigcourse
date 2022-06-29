@@ -25,11 +25,12 @@ export const Cardcourse = () => {
     setCourse(getListData());
   }, []);
 
-  const pathName = id?.replace(/-/g, " ").toLowerCase();
+  const pathName = id?.replace(/-/g, "").toLowerCase();
 
   //perlu perbaikan di type courseListnya
   const coursesList = course?.filter(
-    (data) => data.learningPathName.toLowerCase() === pathName
+    (data) =>
+      data.learningPathName.replace(/\s/g, "").toLowerCase() === pathName
   );
   const courseListData = coursesList?.[0]?.courses;
   return (

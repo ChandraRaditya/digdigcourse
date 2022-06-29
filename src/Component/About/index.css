@@ -13,17 +13,23 @@
     border-radius: 10px;
 
 }
-.course-detail-card-wrapper.title-about {
-    font-size: 20px;
+.course-detail-card-wrapper .title-about {
+    font-size: 31px;
     color: #242F9B;
     font-style: Semibold;
-    margin-top: 20px;
     margin-bottom: 10px;
     font-family: 'IBM Plex Sans';
 }
 
 .course-detail-card-wrapper ul {
-    margin-left: 30px;
+    font-size: 16px;
+    padding-top: 5px;
+    margin-left: 19px;
+}
+
+.course-detail-card-wrapper ul li {
+    line-height: 34px;
+    font-size: 16px;
 }
 
 .course-detail-card-wrapper .desc-about{

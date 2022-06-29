@@ -13,15 +13,19 @@ const CourseDetail = () => {
     (state: any) => state.detailedCoursesData.value
   );
   const dispatch = useDispatch();
-  const pathName = id?.replace(/-/g, " ").toLowerCase();
-  const coursesDetail = currentData?.filter(
-    (data: any) => data.courseName.toLowerCase() === pathName
-  );
 
-  console.log(coursesDetail);
+  // console.log("ini dari redux", currentData.courseName);
 
   useEffect(() => {
-    dispatch(detailedCoursesQuery(getCourseDetailData()));
+    // dispatch(detailedCoursesQuery(getCourseDetailData()));
+    const getCourseData = getCourseDetailData();
+    const pathName = id?.replace(/-/g, "").toLowerCase();
+    const coursesDetail = getCourseData?.filter(
+      (data: any) =>
+        data.courseName.replace(/\s/g, "").toLowerCase() === pathName
+    );
+    // console.log("ini var getdata", coursesDetail?.[0].courseName);
+    dispatch(detailedCoursesQuery(coursesDetail?.[0]));
   }, []);
 
   return (
@@ -29,18 +33,18 @@ const CourseDetail = () => {
       <div className="card-detail-banner-container">
         <div className="banner-wrap">
           <div className="banner-content-left">
-            <h1 className="title">HTML</h1>
+            <h1 className="title">{currentData?.courseName}</h1>
             <div className="little-card-container">
-              <p>Pemula</p>
-              <p>16 Jam Belajar</p>
-              <p>HTML</p>
+              <p>{currentData?.level}</p>
+              <p>{currentData?.hours} Jam Belajar</p>
+              <p>{currentData?.courseName}</p>
             </div>
             <p className="course-detail-line-box">
               <button>Mulai Belajar</button>
             </p>
           </div>
           <div className="banner-content-right">
-            <img src="" alt="" />
+            <img src={currentData?.imgUrl} alt="" />
           </div>
         </div>
       </div>

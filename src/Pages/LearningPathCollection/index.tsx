@@ -1,7 +1,6 @@
 import "./index.css";
 import LearnPathCard from "../../Component/LearningPathListCard";
 import Banner from "../../Assets/Images/BannerLearnPath.png";
-import Track from "../../Component/Data";
 import { useEffect, useState } from "react";
 import { getListData } from "../../Helper/getData";
 import { List } from "../../Helper/interface";
