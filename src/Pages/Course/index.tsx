@@ -22,8 +22,12 @@
 import "./index.css";
 import ButtonCourse from "../../Component/ButtonCourse";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Course = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="course-wrapper">
       <div className="course-title">

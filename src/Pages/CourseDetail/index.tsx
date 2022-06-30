@@ -50,9 +50,9 @@ const CourseDetail = () => {
       </div>
       <div className="silabus">
         <div className="silabus-container">
-          <div className="silabus-button">
+          <a href="#materi-course" className="silabus-button">
             <p>Lihat Silabus</p>
-          </div>
+          </a>
         </div>
       </div>
       <div className="course-detail-card-content-container">

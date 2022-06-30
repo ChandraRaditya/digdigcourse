@@ -88,7 +88,6 @@ export const Cardcourse = () => {
               </CardContent>
               <CardActions sx={{ padding: 0 }}>
                 <Button
-                  desc={"Mulai belajar"}
                   link={`/course-detail/${data.courseName
                     .replace(/\s/g, "-")
                     .toLowerCase()}`}

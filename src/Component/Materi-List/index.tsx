@@ -5,7 +5,7 @@ function ListMateri(props: any) {
   return (
     <div className="card-list">
       <h3>{props.title}</h3>
-      <Link to={""}>
+      <Link to={"/course/html"}>
         <button className="card-button">Buka</button>
       </Link>
     </div>

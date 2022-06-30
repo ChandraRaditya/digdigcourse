@@ -10,6 +10,7 @@ function LearningPathCollection() {
 
   useEffect(() => {
     setLearningPath(getListData());
+    window.scrollTo(0, 0);
   }, []);
 
   const LearningPathList = learningPath?.map((item) => {

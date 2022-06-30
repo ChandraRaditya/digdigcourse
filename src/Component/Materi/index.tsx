@@ -11,7 +11,7 @@ function Materi() {
     return <ListMateri key={id} title={val.title} />;
   });
   return (
-    <div>
+    <div id="materi-course">
       <div className="course-detail-card-wrapper">
         <h2 className="sub-title">Materi</h2>
         {mappingListMateri}
