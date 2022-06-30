@@ -1,0 +1,35 @@
+.course-description{
+    padding: 25px 45px;
+    max-width: 1014px;
+    width: 100%;
+    min-height: 780px;
+    margin-left: 16px;
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+}
+
+.course-description-title{
+    margin-bottom: 40px;
+}
+
+.course-read-content {
+    flex-grow: 1;
+}
+
+.course-action{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-course-action{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #fff;
+    background: #5779F1;
+}
