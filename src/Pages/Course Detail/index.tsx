@@ -1,6 +1,5 @@
 import About from '../../Component/About';
 import Materi from '../../Component/Materi';
-import Navbar from '../../Component/Navbar';
 import './index.css';
 
 const CourseDetail = () => {

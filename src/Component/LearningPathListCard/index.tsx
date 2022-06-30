@@ -11,18 +11,18 @@ interface IProps {
 const LearnPathCard: React.FC<IProps> = ({ title, desc, img, id}) => {
 
   return (
-    <div className="card-wrapper">
+    <div className="learn-card-wrapper">
       <div className="card-body">
         <div className="card-header">
-          <img className='card-img' src={img} alt="" />
+          <img data-testid='card-img' className='card-img' src={img} alt="" />
         </div>
         <div className="card-content">
-          <p className='title-learningPath'>{title}</p>
-          <p className='desc-learningPath'>{desc}</p>
+          <p data-testid='title' className='title-learningPath'>{title}</p>
+          <p data-testid='description' className='desc-learningPath'>{desc}</p>
         </div>
       </div>
       <div className="card-footer">
-        <Button desc='Selengkapnya' link={`/learning-path/${id}`} />
+        <Button data-testid='btn' link={`/learning-path/${id}`} />
       </div>
     </div>
   );
