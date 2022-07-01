@@ -1,10 +1,11 @@
+import { ListOfAnswer } from "../../Helper/interface";
 import "./index.css";
 
-function CardOption() {
+function CardOption({ answerId, label }: ListOfAnswer) {
   return (
     <div className="card-option">
-      <div className="card-option-chooice">A</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div className="card-option-chooice">{answerId}</div>
+      <p>{label}</p>
     </div>
   );
 }

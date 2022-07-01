@@ -67,3 +67,8 @@ export interface objectDataType {
     detailedMaterials: detailedMaterialsType,
     detailedCourses: detailedCoursesType,
 }
+
+export interface ParamTypes {
+    id: string;
+    idMaterial: string;
+  }

@@ -4,12 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import About from "../../Component/About";
 import Materi from "../../Component/Materi";
 import { getCourseDetailData } from "../../Helper/getData";
-import { Cours } from "../../Helper/interface";
+import { Cours, ParamTypes } from "../../Helper/interface";
 import { detailedCoursesQuery } from "../../Redux/sliceDetailedCourses";
 import "./index.css";
 
 const CourseDetail = () => {
-  const { id } = useParams<{ id?: string | undefined }>();
+  const { id } = useParams<ParamTypes>();
   const currentData: Cours | undefined = useSelector(
     (state: any) => state.detailedCoursesData.value
   );

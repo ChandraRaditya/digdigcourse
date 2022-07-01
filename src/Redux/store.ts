@@ -3,10 +3,12 @@ import { configureStore } from "@reduxjs/toolkit";
 // import searchReducer from "./pages/search/reducer";
 import learningPathReducer from "./sliceLearningPath";
 import detailedCoursesReducer from "./sliceDetailedCourses"
+import detailedMaterialsReducer from "./sliceDetailedMaterials"
 
 export default configureStore({
     reducer: {
         learningPathData: learningPathReducer,
-        detailedCoursesData: detailedCoursesReducer
+        detailedCoursesData: detailedCoursesReducer,
+        detailedMaterialsData: detailedMaterialsReducer
     }
 });

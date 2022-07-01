@@ -1,9 +1,5 @@
-.course-description{
+.course-description {
     padding: 25px 45px;
-    max-width: 1014px;
-    width: 100%;
-    min-height: 780px;
-    margin-left: 16px;
     display: flex;
     text-align: start;
     flex-direction: column;

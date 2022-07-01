@@ -49,8 +49,18 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.course-description, .quiz-content {
+    max-width: 1014px;
+    width: 100%;
+    margin-left: 16px;
+    min-height: 780px;
+}
+
 .course-item{
-    width: 20%;
+    top: 0;
+    position: sticky;
+    height: 580px;
+    width: 293px;
     padding: 1%;
 }
 

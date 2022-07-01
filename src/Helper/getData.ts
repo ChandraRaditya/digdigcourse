@@ -23,3 +23,15 @@ export const getCourseDetailData =  () => {
     console.log('this is error getCourseDetailData',error)
   }
 }
+
+export const getMaterialsData =  () => {
+  try {
+    const dataObj : objectDataType =  JSON.parse(
+      localStorage.getItem("obj") || "{}"
+    );
+
+  return dataObj["detailedMaterials"].materials
+  } catch (error) {
+    console.log('this is error getCourseDetailData',error)
+  }
+}

@@ -6,6 +6,7 @@
     border-radius: 10px;
     width: 703.1px;
     height: 70px;
+    margin-bottom: 15px;
 }
 
 .card-option .card-option-chooice {
@@ -23,6 +24,7 @@
 }
 
 .card-option p {
+    text-align: left;
     margin-left: 25px;
     font-weight: 600;
     font-size: 18px;

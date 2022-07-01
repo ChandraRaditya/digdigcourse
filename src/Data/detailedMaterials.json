@@ -31,6 +31,31 @@
                 }
             ],
             "correctAnswer": "112B"
+        },
+        {
+            "id": "113",
+            "title": "tag pada HTML?",
+            "type": "quiz",
+            "question": "sebutkan tag untuk paragraph?",
+            "listOfAnswer": [
+                {
+                    "answerId": "112A",
+                    "label": "<p></p>"
+                },
+                {
+                    "answerId": "112B",
+                    "label": "<h1></h1>"
+                },
+                {
+                    "answerId": "112C",
+                    "label": "<a></a>"
+                },
+                {
+                    "answerId": "112D",
+                    "label": "<h3></h3>"
+                }
+            ],
+            "correctAnswer": "112B"
         }
     ]
 }

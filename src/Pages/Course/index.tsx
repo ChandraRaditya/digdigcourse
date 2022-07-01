@@ -5,11 +5,48 @@ import ButtonCourse from "../../Component/ButtonCourse";
 import "./index.css";
 import CourseReadContent from "../../Component/CourseReadContent";
 import { useEffect } from "react";
+import { getMaterialsData } from "../../Helper/getData";
+import { useParams } from "react-router-dom";
+import { detailedMaterialsQuery } from "../../Redux/sliceDetailedMaterials";
+import { useDispatch, useSelector } from "react-redux";
+import { Materials, ParamTypes } from "../../Helper/interface";
 
 function Course() {
+  const { idMaterial } = useParams<ParamTypes>();
+  const dispatch = useDispatch();
+  const currentData: Materials[] = useSelector(
+    (state: any) => state.detailedMaterialsData.value
+  );
+
+  console.log("ini redux", currentData);
+
   useEffect(() => {
+    const getMaterials = getMaterialsData();
+    // const materialsDetail = getMaterials?.filter(
+    //   (data: any) => data.id === idMaterial
+    // );
+    dispatch(detailedMaterialsQuery(getMaterials));
+    // console.log(materialsDetail?.[0], idMaterial);
     window.scrollTo(0, 0);
   }, []);
+
+  const getContentCourse = currentData?.filter(
+    (data: any) => data.id === idMaterial
+  );
+
+  const moduleMaterials = currentData?.map((data) => {
+    return <ButtonCourse title={data.title} idMaterials={data.id} />;
+  });
+
+  console.log("content", getContentCourse);
+
+  const contentCourse =
+    getContentCourse?.[0]?.type === "article" ? (
+      <CourseReadContent />
+    ) : (
+      <CourseQuizContent />
+    );
+
   return (
     <div className="course-section">
       <div className="course-section-container">
@@ -17,12 +54,9 @@ function Course() {
         <div className="course-component-container">
           <div className="course-item">
             <h1>Modul Belajar</h1>
-            {[...new Array(6)].map(() => (
-              <ButtonCourse desc="modul" link="/question" />
-            ))}
+            {moduleMaterials}
           </div>
-          <CourseQuizContent />
-          {/* <CourseReadContent /> */}
+          {contentCourse}
         </div>
       </div>
     </div>
