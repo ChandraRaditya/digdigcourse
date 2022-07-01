@@ -1,18 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import About from "../../Component/About";
 import Materi from "../../Component/Materi";
 import { getCourseDetailData } from "../../Helper/getData";
+import { Cours } from "../../Helper/interface";
 import { detailedCoursesQuery } from "../../Redux/sliceDetailedCourses";
 import "./index.css";
 
 const CourseDetail = () => {
   const { id } = useParams<{ id?: string | undefined }>();
-  const currentData = useSelector(
+  const currentData: Cours | undefined = useSelector(
     (state: any) => state.detailedCoursesData.value
   );
   const dispatch = useDispatch();
+  const pathName = id?.replace(/-/g, "").toLowerCase();
 
   // console.log("ini dari redux", currentData.courseName);
 
@@ -39,9 +41,11 @@ const CourseDetail = () => {
               <p>{currentData?.hours} Jam Belajar</p>
               <p>{currentData?.courseName}</p>
             </div>
-            <p className="course-detail-line-box">
-              <button>Mulai Belajar</button>
-            </p>
+            <Link to={`/course/${pathName}/${currentData?.materials?.[0]?.id}`}>
+              <p className="course-detail-line-box">
+                <button>Mulai Belajar</button>
+              </p>
+            </Link>
           </div>
           <div className="banner-content-right">
             <img src={currentData?.imgUrl} alt="" />

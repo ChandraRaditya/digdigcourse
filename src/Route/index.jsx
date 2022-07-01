@@ -20,7 +20,7 @@ function AppRoute() {
             component={LearningPathCollection}
           ></Route>
           <Route path="/learning-path/:id" component={LearningPath} />
-          <Route path="/course/html" component={Course} />
+          <Route path="/course/:id/:idMaterial" component={Course} />
           <Route path="/course-detail/:id" component={CourseDetail} />
         </Switch>
       </main>

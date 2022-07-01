@@ -8,7 +8,7 @@
     max-width: 1250px;
     width: 100%;
     text-align: left;
-    padding-top: 60px;
+    padding-top: 35px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,8 +55,6 @@
 }
 
 .banner-content-right img {
-    width: 496px;
-    height: 267px;
     border: 0.5px solid #CBC8C8;
     border-radius: 10px 10px 0px 0px;
 }

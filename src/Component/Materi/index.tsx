@@ -1,14 +1,22 @@
 import { useSelector } from "react-redux";
+import { Cours } from "../../Helper/interface";
 import ListMateri from "../Materi-List";
 import "./index.css";
 
 function Materi() {
-  const currentData = useSelector(
+  const currentData: Cours = useSelector(
     (state: any) => state.detailedCoursesData.value
   );
 
-  const mappingListMateri = currentData?.materials?.map((val: any, id: any) => {
-    return <ListMateri key={id} title={val.title} />;
+  const mappingListMateri = currentData?.materials?.map((val, id) => {
+    return (
+      <ListMateri
+        key={id}
+        title={val.title}
+        id={val.id}
+        nameCourse={currentData.courseName}
+      />
+    );
   });
   return (
     <div id="materi-course">

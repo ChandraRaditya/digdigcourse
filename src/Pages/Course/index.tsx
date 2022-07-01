@@ -4,21 +4,25 @@ import CourseQuizContent from "../../Component/CourseQuizContent";
 import ButtonCourse from "../../Component/ButtonCourse";
 import "./index.css";
 import CourseReadContent from "../../Component/CourseReadContent";
+import { useEffect } from "react";
 
 function Course() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="course-section">
       <div className="course-section-container">
         <h2>HTML COURSE</h2>
         <div className="course-component-container">
           <div className="course-item">
-            <h1>Modul belajar</h1>
+            <h1>Modul Belajar</h1>
             {[...new Array(6)].map(() => (
               <ButtonCourse desc="modul" link="/question" />
             ))}
           </div>
-          {/* <CourseQuizContent /> */}
-          <CourseReadContent />
+          <CourseQuizContent />
+          {/* <CourseReadContent /> */}
         </div>
       </div>
     </div>

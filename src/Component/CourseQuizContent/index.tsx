@@ -1,4 +1,4 @@
-import CardChoice from "../CardChoise";
+import CardOption from "../CardOption";
 import "./index.css";
 
 function CourseQuizContent() {
@@ -10,7 +10,7 @@ function CourseQuizContent() {
           arcu, malesuada vel vulputate dignissim, efficitur eget ex.
         </h2>
         <div className="choice-container">
-          <CardChoice />
+          <CardOption />
         </div>
       </div>
     </div>
