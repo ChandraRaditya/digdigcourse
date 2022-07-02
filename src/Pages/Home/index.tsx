@@ -11,7 +11,6 @@ import { learningPathQuery } from "../../Redux/sliceLearningPath";
 function Home() {
   const currentData = useSelector((state: any) => state.learningPathData.value);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(learningPathQuery(getListData()));
   }, []);

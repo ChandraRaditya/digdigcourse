@@ -8,12 +8,7 @@ import { Provider } from "react-redux";
 import store from "./Redux/store";
 
 function App() {
-  // const checkDataObj = localStorage.getItem("obj");
-  const [objData, setObjData] = useState(() => {
-    const saved = localStorage.getItem("obj");
-    const initialValue = JSON.parse(saved || "{}");
-    return initialValue || "";
-  });
+  const data = localStorage.getItem("obj");
 
   useEffect(() => {
     const obj = {
@@ -26,15 +21,9 @@ function App() {
       window.location.reload();
       localStorage.setItem("obj", JSON.stringify(obj));
     }
+  }, [data]);
 
-    // window.addEventListener("storage", () => {
-    //   localStorage.setItem("obj", JSON.stringify(obj));
-    // });
-
-    // localStorage.setItem("obj", JSON.stringify(obj));
-  }, []);
-
-  console.log("ini obj state", objData);
+  // console.log("ini obj state", objData);
 
   return (
     <Provider store={store}>

@@ -28,6 +28,7 @@ const CourseDetail = () => {
     );
     // console.log("ini var getdata", coursesDetail?.[0].courseName);
     dispatch(detailedCoursesQuery(coursesDetail?.[0]));
+    window.scrollTo(0, 0);
   }, []);
 
   return (

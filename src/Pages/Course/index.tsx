@@ -5,28 +5,29 @@ import ButtonCourse from "../../Component/ButtonCourse";
 import "./index.css";
 import CourseReadContent from "../../Component/CourseReadContent";
 import { useEffect } from "react";
-import { getMaterialsData } from "../../Helper/getData";
+import { getCourseDetailData, getMaterialsData } from "../../Helper/getData";
 import { useParams } from "react-router-dom";
 import { detailedMaterialsQuery } from "../../Redux/sliceDetailedMaterials";
 import { useDispatch, useSelector } from "react-redux";
 import { Materials, ParamTypes } from "../../Helper/interface";
 
 function Course() {
+  const { id } = useParams<ParamTypes>();
   const { idMaterial } = useParams<ParamTypes>();
   const dispatch = useDispatch();
   const currentData: Materials[] = useSelector(
     (state: any) => state.detailedMaterialsData.value
   );
+  const idCourse = getCourseDetailData();
+  // const checkIdCourse = idCourse?.filter((data) => {
+  //   data.courseName.toLowerCase() === id;
+  // });
 
-  console.log("ini redux", currentData);
+  // console.log("ini redux", checkIdCourse);
 
   useEffect(() => {
     const getMaterials = getMaterialsData();
-    // const materialsDetail = getMaterials?.filter(
-    //   (data: any) => data.id === idMaterial
-    // );
     dispatch(detailedMaterialsQuery(getMaterials));
-    // console.log(materialsDetail?.[0], idMaterial);
     window.scrollTo(0, 0);
   }, []);
 
@@ -34,11 +35,13 @@ function Course() {
     (data: any) => data.id === idMaterial
   );
 
+  // const getDataMaterial =
+
   const moduleMaterials = currentData?.map((data) => {
     return <ButtonCourse title={data.title} idMaterials={data.id} />;
   });
 
-  console.log("content", getContentCourse);
+  // console.log("content", getContentCourse);
 
   const contentCourse =
     getContentCourse?.[0]?.type === "article" ? (

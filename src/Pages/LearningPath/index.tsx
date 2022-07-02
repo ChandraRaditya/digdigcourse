@@ -23,6 +23,7 @@ export const Cardcourse = () => {
 
   useEffect(() => {
     setCourse(getListData());
+    window.scrollTo(0, 0);
   }, []);
 
   const pathName = id?.replace(/-/g, "").toLowerCase();
