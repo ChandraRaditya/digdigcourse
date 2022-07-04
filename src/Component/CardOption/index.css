@@ -22,7 +22,7 @@
     background: #FBFBFB;
     border: 1px solid #5779F1;
     border-radius: 10px;
-    width: 54.93px;
+    min-width: 54.93px;
     height: 50px;
     color: #242F9B;
     line-height: 50px;
