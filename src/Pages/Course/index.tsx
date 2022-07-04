@@ -19,6 +19,7 @@ function Course() {
     (state: any) => state.detailedMaterialsData.value
   );
   const idCourse = getCourseDetailData();
+  const data = localStorage.getItem("obj");
   // const checkIdCourse = idCourse?.filter((data) => {
   //   data.courseName.toLowerCase() === id;
   // });
@@ -29,7 +30,7 @@ function Course() {
     const getMaterials = getMaterialsData();
     dispatch(detailedMaterialsQuery(getMaterials));
     window.scrollTo(0, 0);
-  }, []);
+  }, [data, dispatch]);
 
   const getContentCourse = currentData?.filter(
     (data: any) => data.id === idMaterial

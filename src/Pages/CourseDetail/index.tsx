@@ -15,6 +15,7 @@ const CourseDetail = () => {
   );
   const dispatch = useDispatch();
   const pathName = id?.replace(/-/g, "").toLowerCase();
+  const data = localStorage.getItem("obj");
 
   // console.log("ini dari redux", currentData.courseName);
 
@@ -29,7 +30,7 @@ const CourseDetail = () => {
     // console.log("ini var getdata", coursesDetail?.[0].courseName);
     dispatch(detailedCoursesQuery(coursesDetail?.[0]));
     window.scrollTo(0, 0);
-  }, []);
+  }, [data, dispatch, id]);
 
   return (
     <div>

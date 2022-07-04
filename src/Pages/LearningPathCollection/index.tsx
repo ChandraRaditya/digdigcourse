@@ -7,11 +7,12 @@ import { List } from "../../Helper/interface";
 
 function LearningPathCollection() {
   const [learningPath, setLearningPath] = useState<List[] | undefined>([]);
+  const data = localStorage.getItem("obj");
 
   useEffect(() => {
     setLearningPath(getListData());
     window.scrollTo(0, 0);
-  }, []);
+  }, [data]);
 
   const LearningPathList = learningPath?.map((item) => {
     return (

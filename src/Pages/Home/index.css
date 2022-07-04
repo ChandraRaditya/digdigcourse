@@ -24,7 +24,7 @@
 
 .cover-text-container {
     text-align: left;
-    max-width: 431px;
+    max-width: 458px;
     width: 100%;
     margin-right: 223px;
     margin-top: 38px;
@@ -32,19 +32,21 @@
 
 .cover-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 32px;
     line-height: 42px;
     margin-bottom: 15px;
 }
 
 .cover-text {
-    max-width: 331px;
+    /* max-width: 331px; */
     width: 100%;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    color: #d3d1d1;
+    letter-spacing: 0.5px;
 }
 
 .keuntungan-box {
@@ -66,7 +68,6 @@
     line-height: 26px;
     text-align: left;
     color: #000000;
-    border-bottom: 1px solid #DA1919;
     transform: matrix(1, 0, 0, 1, 0, 0);
     margin-bottom: 19px;
 }
@@ -88,10 +89,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 7px #c7c7c77d;
 }
 
 .keuntungan-item p {
-    width: 161px;
+    width: 182px;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;

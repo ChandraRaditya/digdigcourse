@@ -16,6 +16,7 @@ import { useParams } from "react-router-dom";
 export const Cardcourse = () => {
   const { id } = useParams<{ id?: string | undefined }>();
   const [course, setCourse] = useState<List[] | undefined>([]);
+  const data = localStorage.getItem("obj");
   // const currentId = useSelector((state: any) => state.id.value);
   // console.log("ini id dari redux", currentId);
   // console.log("ini id dari url", id);
@@ -24,7 +25,7 @@ export const Cardcourse = () => {
   useEffect(() => {
     setCourse(getListData());
     window.scrollTo(0, 0);
-  }, []);
+  }, [data]);
 
   const pathName = id?.replace(/-/g, "").toLowerCase();
 

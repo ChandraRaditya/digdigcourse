@@ -1,12 +1,15 @@
+import { useState } from "react";
 import { ListOfAnswer } from "../../Helper/interface";
 import "./index.css";
 
 function CardOption({ answerId, label }: ListOfAnswer) {
+  const [answer, setAnswer] = useState<string>("");
+
   return (
-    <div className="card-option">
+    <button className="card-option">
       <div className="card-option-chooice">{answerId}</div>
       <p>{label}</p>
-    </div>
+    </button>
   );
 }
 

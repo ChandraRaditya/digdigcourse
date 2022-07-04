@@ -11,9 +11,11 @@ import { learningPathQuery } from "../../Redux/sliceLearningPath";
 function Home() {
   const currentData = useSelector((state: any) => state.learningPathData.value);
   const dispatch = useDispatch();
+  const data = localStorage.getItem("obj");
+
   useEffect(() => {
     dispatch(learningPathQuery(getListData()));
-  }, []);
+  }, [data, dispatch]);
 
   // console.log("ini redux baru", currentData);
 
@@ -39,7 +41,7 @@ function Home() {
           <div className="cover-container">
             <div className="cover-text-container">
               <h1 className="cover-title">
-                Belajar Di DigDigCourse Dimanapun Dan Kapanpun
+                Belajar Di <br /> DigDigCourse <br /> Dimanapun Dan Kapanpun
               </h1>
               <p className="cover-text">
                 DigDigCourse menyediakan berbagai pilihan Learning Path untuk
@@ -51,7 +53,9 @@ function Home() {
             </div>
           </div>
           <div className="keuntungan-box">
-            <p className="keuntungan-title">Keuntungan Membeli Produk</p>
+            <p className="keuntungan-title">
+              Keuntungan Belajar di DigdigCourse
+            </p>
             <div className="keuntungan-container">
               <div className="keuntungan-item">
                 <p>

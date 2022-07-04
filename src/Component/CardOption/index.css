@@ -7,6 +7,12 @@
     width: 703.1px;
     height: 70px;
     margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.card-option:hover {
+    background-color: #242F9B;
+    color: white;
 }
 
 .card-option .card-option-chooice {

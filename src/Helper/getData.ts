@@ -6,7 +6,10 @@ export const getListData =  () => {
         localStorage.getItem("obj") || "{}"
       );
 
-    return dataObj["LearningPath"].List
+    // return dataObj["LearningPath"].List
+    if (dataObj["LearningPath"]) {
+      return dataObj["LearningPath"].List
+    }
     } catch (error) {
       console.log('this is error getListData',error)
     }
