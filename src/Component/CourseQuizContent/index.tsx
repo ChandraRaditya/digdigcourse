@@ -2,8 +2,9 @@ import CardOption from "../CardOption";
 import "./index.css";
 import { ParamTypes, Materials } from "../../Helper/interface";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { answerQuizQuery } from "../../Redux/sliceAnswerQuiz";
 
 function CourseQuizContent() {
   const { idMaterial } = useParams<ParamTypes>();
@@ -18,12 +19,15 @@ function CourseQuizContent() {
   const getContentCourse = currentData?.filter(
     (data) => data.id === idMaterial
   );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(answerQuizQuery(""));
+  }, [dispatch, idMaterial]);
 
   useEffect(() => {
     setKeyAnswer(getContentCourse?.[0]?.correctAnswer);
-  }, [idMaterial, getContentCourse]);
-
-  console.log("option", getContentCourse?.[0]?.listOfAnswer);
+  }, [idMaterial, getContentCourse, currentAnswer]);
 
   const multipleChooice = getContentCourse?.[0]?.listOfAnswer?.map(
     (data, id) => {
@@ -32,6 +36,7 @@ function CourseQuizContent() {
           key={id}
           answerId={data.answerId[data.answerId.length - 1]}
           label={data.label}
+          currentAnswer={currentAnswer}
         />
       );
     }

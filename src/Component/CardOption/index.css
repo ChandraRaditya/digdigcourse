@@ -10,10 +10,10 @@
     cursor: pointer;
 }
 
-.card-option:hover {
+/* .card-option:hover {
     background-color: #242F9B;
     color: white;
-}
+} */
 
 .card-option .card-option-chooice {
     font-style: normal;

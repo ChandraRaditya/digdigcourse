@@ -50,8 +50,7 @@
 }
 
 .course-description, .quiz-content {
-    max-width: 1014px;
-    width: 100%;
+    width: 1014px;
     margin-left: 16px;
     min-height: 780px;
 }
@@ -60,7 +59,8 @@
     top: 0;
     position: sticky;
     height: 580px;
-    width: 293px;
+    max-width: 265px;
+    min-width: 265px;
     padding: 1%;
 }
 

@@ -71,4 +71,10 @@ export interface objectDataType {
 export interface ParamTypes {
     id: string;
     idMaterial: string;
+}
+
+export interface cardOptionComponent {
+    answerId: string;
+    label: string;
+    currentAnswer: string;
   }

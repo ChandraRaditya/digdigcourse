@@ -11,19 +11,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Materials, ParamTypes } from "../../Helper/interface";
 
 function Course() {
-  // const { id } = useParams<ParamTypes>();
   const { idMaterial } = useParams<ParamTypes>();
   const dispatch = useDispatch();
   const currentData: Materials[] = useSelector(
     (state: any) => state.detailedMaterialsData.value
   );
-  // const idCourse = getCourseDetailData();
   const data = localStorage.getItem("obj");
-  // const checkIdCourse = idCourse?.filter((data) => {
-  //   data.courseName.toLowerCase() === id;
-  // });
-
-  // console.log("ini redux", checkIdCourse);
 
   useEffect(() => {
     const getMaterials = getMaterialsData();
@@ -34,8 +27,6 @@ function Course() {
   const getContentCourse = currentData?.filter(
     (data: any) => data.id === idMaterial
   );
-
-  // const getDataMaterial =
 
   const moduleMaterials = currentData?.map((data, id) => {
     return <ButtonCourse key={id} title={data.title} idMaterials={data.id} />;
