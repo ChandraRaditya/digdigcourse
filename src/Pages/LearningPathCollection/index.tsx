@@ -1,37 +1,37 @@
-import React from 'react'; 
-import './index.css';
-// import { useEffect, useState } from 'react';
+import "./index.css";
 import LearnPathCard from "../../Component/LearningPathListCard";
 import Banner from "../../Assets/Images/BannerLearnPath.png";
-import Data from "../../Component/Data";
+import { useEffect, useState } from "react";
+import { getListData } from "../../Helper/getData";
+import { List } from "../../Helper/interface";
 
 function LearningPathCollection() {
-  // const [value, setValue] = useState(
-  //   JSON.parse(localStorage.getItem('DataCourse') || ''
-  // ))
-  // console.log(value)
+  const [learningPath, setLearningPath] = useState<List[] | undefined>([]);
+  const data = localStorage.getItem("obj");
 
+  useEffect(() => {
+    setLearningPath(getListData());
+    window.scrollTo(0, 0);
+  }, [data]);
+
+  const LearningPathList = learningPath?.map((item) => {
+    return (
+      <LearnPathCard
+        title={item.learningPathName}
+        desc={item.info}
+        img={item.imgUrl}
+      />
+    );
+  });
   return (
-    <div className='learning-path-wrapper'>
-      <div className="banner">
-        <img className='banner-img' src={Banner} alt="" />
+    <div className="learning-path-wrapper">
+      <div className="learning-path-banner">
+        <img className="banner-img" src={Banner} alt="" />
       </div>
       <h1>Learning Path List</h1>
-      <div className="learning-path-list-wrapper">
-        {Data.map((item) => (
-          <LearnPathCard
-            title={item.name}
-            desc={item.description}
-            img={item.image}
-            id={item.id}
-          />
-        ))}
-      </div>
+      <div className="learning-path-list-wrapper">{LearningPathList}</div>
     </div>
   );
 }
 
 export default LearningPathCollection;
-
-
-

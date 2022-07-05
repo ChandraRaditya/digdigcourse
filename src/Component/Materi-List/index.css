@@ -1,23 +1,32 @@
-.card-list{
+.course-detail-card-wrapper .card-list{
     border-radius: 10px;
     background-color: #E0E4F3;
     max-width: 793px;
     padding: 10px;
+    padding-left: 20px;
     margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.card-button{
-    max-width: 85px;
+
+.course-detail-card-wrapper .card-list h3{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.course-detail-card-wrapper .card-button{
+    background: #303ca5;
+    color:  white;
+    font-weight: 600;
+    font-size: 12px;
+    width: 85px;
     border-radius: 5px;
     border: 0.4px solid #5779F1;
     padding: 7px 0;
-}
-
-.card-button p{
-    color:  #5779F1;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width:768px) {

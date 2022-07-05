@@ -1,49 +1,78 @@
-.container{
+.card-detail-banner-container{
     background-color: #EFF2F6;
     height: 350px;
 }
 
-.container-wrap{
+.card-detail-banner-container .banner-wrap{
+    margin: 0 auto;
+    max-width: 1250px;
+    width: 100%;
     text-align: left;
-    padding-top: 60px;
-    padding-left: 200px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.title{
+.banner-content-left {
+    max-width: 500px;
+    width: 100%;
+}
+
+.banner-content-left .title{
     font-size: 36px;
     margin-bottom: 90px;
     margin-left: 5px;
 }
 
-.button p{
+.card-detail-banner-container .little-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 17px;
+}
+
+.card-detail-banner-container .little-card-container p{
     color:  #5779F1;
     text-align: center;
     font-weight: lighter;
     font-size: 12px;
-    max-width: 85px;
-    padding: 10px 15px;
+    padding: 10px 7px;
     background-color: #E0E4F3;
     border-radius: 10px;
-    display: inline;
-    margin: 0 5px;
+    margin-right: 11px;
 }
-p span{
-    color:  #FFFFFF;
-    text-align: center;
-    font-weight: bold;
+
+.course-detail-line-box button{
+    color:#FFFFFF;
+    width: 98px;
+    font-weight: 700;
     font-size: 12px;
-    max-width: 85px;
     padding: 10px;
     background-color: #5779F1;
     border-radius: 10px;
-    margin: 10px 5px;
+    border: none;
 }
 
+.banner-content-right img {
+    border: 0.5px solid #CBC8C8;
+    border-radius: 10px 10px 0px 0px;
+}
 
 .silabus{
     background-image: linear-gradient(#1E2568, #37698E);
+}
+
+.silabus .silabus-container {
+    margin: 0 auto;
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     padding: 15px;
 }
+
 .silabus-button{
     max-width: fit-content;
     border-radius: 10px;
@@ -51,6 +80,7 @@ p span{
     padding: 10px 10px;
     display: flex;
     justify-content: end;
+    text-decoration: none;
 }
 
 .silabus-button p{
@@ -59,6 +89,10 @@ p span{
     font-weight: bold;
     margin: 2px;
     font-size: 16px;
+}
+
+.course-detail-card-content-container {
+    margin-bottom: 79px;
 }
 
 

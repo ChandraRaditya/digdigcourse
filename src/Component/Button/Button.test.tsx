@@ -1,19 +1,17 @@
-import Button from "./index";
-import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
+import Button from ".";
+import { createMemoryHistory } from "history";
 import userEvent from "@testing-library/user-event";
+import { Router } from "react-router-dom";
 import React from "react";
 
-test("searchbar rendered", () => {
+test("simulate button", async () => {
   const historys = createMemoryHistory();
   render(
     <Router history={historys}>
-      <Button link="/learning-path/HTML" />
+      <Button link={`/learning-path/HTML`} />
     </Router>
   );
-
-  userEvent.click(screen.getByText(/selengkapnya/));
-
-  expect(historys.location.pathname).toEqual("/learning-path/HTML");
+  userEvent.click(screen.getByText(/Selengkapnya/));
+  expect(historys.location.pathname).toBe("/learning-path/HTML");
 });

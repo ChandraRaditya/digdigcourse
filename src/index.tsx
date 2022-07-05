@@ -1,6 +1,7 @@
 import React from "react";
 // this is for react v18
-// import ReactDOM from 'react-dom/client';
+// import ReactDOM from "react-dom/client";
+// this is for react v17
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -15,6 +16,8 @@ import reportWebVitals from "./reportWebVitals";
 //     <App />
 //   </React.StrictMode>
 // );
+
+//this is for react v17
 ReactDOM.render(
   <React.StrictMode>
     <App />

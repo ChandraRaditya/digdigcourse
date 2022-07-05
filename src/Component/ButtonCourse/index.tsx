@@ -1,16 +1,19 @@
-import './index.css';
-import {Link} from 'react-router-dom';
+import "./index.css";
+import { Link, useParams } from "react-router-dom";
+import { ParamTypes } from "../../Helper/interface";
 
 interface IProps {
-  desc: string;
-  link: string;
+  title: string;
+  idMaterials: string;
 }
 
-const ButtonCourse: React.FC<IProps> = ({ desc, link }) => {
-
+const ButtonCourse: React.FC<IProps> = ({ title, idMaterials }) => {
+  const { id } = useParams<ParamTypes>();
 
   return (
-      <Link className='btn-course' to={link}>{desc}</Link>
+    <Link to={`/course/${id.toLowerCase()}/${idMaterials}`}>
+      <button className="btn-course">{title}</button>
+    </Link>
   );
-}
+};
 export default ButtonCourse;

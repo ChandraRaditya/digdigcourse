@@ -1,37 +1,35 @@
-import LearnPathCard from './index'
+import LearnPathCard from "./index";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter } from "react-router-dom";
+import React from "react";
 
 test("LearnPathCard rendered", () => {
-    render(
-        <BrowserRouter>
-            <LearnPathCard />
-        </BrowserRouter>);
-    // 
-    const image = screen.getByRole("img");
-    expect(image).toBeInTheDocument();
+  render(
+    <BrowserRouter>
+      <LearnPathCard />
+    </BrowserRouter>
+  );
+  //
+  const image = screen.getByRole("img");
+  expect(image).toBeInTheDocument();
 
-    const title = screen.getByTestId("title");
-    expect(title).toBeInTheDocument();
+  const title = screen.getByTestId("title");
+  expect(title).toBeInTheDocument();
 
-    const description = screen.getByTestId("description");
-    expect(description).toBeInTheDocument();
-
-
+  const description = screen.getByTestId("description");
+  expect(description).toBeInTheDocument();
 });
 
-
 test("simulate button", async () => {
-    render(
-        <BrowserRouter>
-            <LearnPathCard />
-        </BrowserRouter>);
-    const title = screen.getByRole('link');
+  render(
+    <BrowserRouter>
+      <LearnPathCard />
+    </BrowserRouter>
+  );
+  const title = screen.getByRole("link");
 
-    await userEvent.click(title);
+  await userEvent.click(title);
 
-    expect(title).toBeTruthy();
-
+  expect(title).toBeTruthy();
 });

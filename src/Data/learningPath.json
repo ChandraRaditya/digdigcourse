@@ -1,0 +1,129 @@
+{
+    "type": "learning-path",
+    "List": [
+        {
+            "id": "1",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/LearningPath%2Ffrontend.jpg?alt=media&token=c654303f-8574-426d-9c04-b1f73ab78095",
+            "learningPathName": "Front End Learning Path",
+            "info": "Mendesign website dengan indah dan memiliki fungsionalitas yang baik",
+            "hours": "60 jam",
+            "level": "pemula",
+            "courses": [
+                {
+                    "id": "11",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "HTML",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "12",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "CSS",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "13",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Javascript",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/LearningPath%2Fbackend.jpg?alt=media&token=f5b06fd8-40d0-45af-be6d-cd0040f908cc",
+            "learningPathName": "Back End Path",
+            "info": "Belajar database, scripting, dan arsitektur dari sebuah website.",
+            "hours": "60 Jam",
+            "level": "pemula",
+            "courses": [
+                {
+                    "id": "21",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "AWS Cloud",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "22",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Fundamental Javascript",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "23",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Database Basic",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/LearningPath%2Fandroid.jpg?alt=media&token=58ae3e67-f2ff-4d99-908a-13c933f841e1",
+            "learningPathName": "Android Path",
+            "info": "Membangun aplikasi untuk prangkat mobile untuk sistem operasi android",
+            "hours": "60 Jam",
+            "level": "pemula",
+            "courses": [
+                {
+                    "id": "31",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Kotlin",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "32",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Fundamental Aplikasi Android",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "33",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Prinsip Pemerogaman SOLID",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/LearningPath%2Fios.jpg?alt=media&token=ebbc6caa-f371-470c-868b-6bfcbdfcdf57",
+            "learningPathName": "IOS Path",
+            "info": "Mengembangkan aplikasi mobile untuk sistem operasi ios",
+            "hours": "60 Jam",
+            "level": "pemula",
+            "courses": [
+                {
+                    "id": "41",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "SWIFT",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "42",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "Fundamental Aplikasi IOS",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                },
+                {
+                    "id": "43",
+                    "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
+                    "courseName": "IOS EXPERT",
+                    "level": "pemula",
+                    "hours": "20 Jam"
+                }
+            ]
+        }
+    ]
+}
