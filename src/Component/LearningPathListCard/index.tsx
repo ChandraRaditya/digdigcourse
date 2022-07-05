@@ -1,5 +1,6 @@
 import "./index.css";
 import Button from "../Button";
+import React from "react";
 
 interface IProps {
   desc: string;
@@ -8,7 +9,7 @@ interface IProps {
 }
 
 const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
-  const urlName = title.toLowerCase().replace(/\s/g, "-");
+  const urlName = title?.toLowerCase().replace(/\s/g, "-");
   return (
     <div className="learn-card-wrapper">
       <div className="card-body">
@@ -16,8 +17,12 @@ const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
           <img className="card-img" src={img} alt="" />
         </div>
         <div className="card-content">
-          <p className="title-learningPath">{title}</p>
-          <p className="desc-learningPath">{desc}</p>
+          <p data-testid="title" className="title-learningPath">
+            {title}
+          </p>
+          <p data-testid="description" className="desc-learningPath">
+            {desc}
+          </p>
         </div>
       </div>
       <div className="card-footer">
