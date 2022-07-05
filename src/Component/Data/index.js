@@ -1,3 +1,47 @@
+// const html = {
+//     name: 'HTML',
+//     description: 'HTML is the standard markup language for creating web pages. It is used for structuring the content of a web page, including text, images, and other objects. HTML is used to create a web page, which is a collection of related elements. HTML elements are the building blocks of HTML pages. HTML elements are represented by tags. Tags are used to mark the beginning and end of an HTML element. HTML elements can be nested, so that you can create more complex HTML pages. HTML elements can also be used to create lists, tables, and other structures. HTML elements can be used to create links, forms, and other controls.',
+//     image: 'https://cdn.freecodecamp.org/news/fcc-images/html-5-logo.png',
+//     time: '15 hours'
+// }
+
+// const FrontEnd = {
+//     name: 'FrondEnd Developer',
+//     description: 'Frond end developer is a position that requires a person to work on a web application. The person must be able to develop a web application using HTML, CSS, and JavaScript.',
+//     image: 'https://www.w3schools.com/howto/img_avatar.png',
+//     HTML: html,
+// }
+
+// const BackEnd = {
+//     name: 'BackEnd Developer',
+//     description: 'Back end developer is a position that requires a person to work on a web application. The person must be able to develop a web application using HTML, CSS, and JavaScript.',
+//     image: 'https://www.w3schools.com/howto/img_avatar.png',
+// }
+
+// const DataScients = {
+//     name: 'Data Scientist', 
+//     description: 'Data scientist is a position that requires a person to work on a web application. The person must be able to develop a web application using HTML, CSS, and JavaScript.',
+//     image: 'https://www.w3schools.com/howto/img_avatar.png',
+// }
+
+// const UIUX = {
+//     name: 'UI/UX Designer',
+//     description: 'UI/UX designer is a position that requires a person to work on a web application. The person must be able to develop a web application using HTML, CSS, and JavaScript.',
+//     image: 'https://www.w3schools.com/howto/img_avatar.png',
+// }
+
+// const DataCourse = {
+//     FRONTEND: 'FrontEnd',
+//     BACKEND: 'BackEnd',
+//     DATASCIENTS: 'DataScients',
+//     UIUX: 'UIUX',
+// }
+// localStorage.setItem('html', JSON.stringify(html));
+// localStorage.setItem('BackEnd', JSON.stringify(BackEnd));
+// localStorage.setItem('FrontEnd', JSON.stringify(FrontEnd));
+// localStorage.setItem('DataCourse', JSON.stringify(DataCourse));
+// const data = JSON.parse(localStorage.getItem(DataCourse))
+// console.log(data)
 
 const data = [
     {

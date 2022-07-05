@@ -10,7 +10,7 @@ interface IProps {
 const LearnPathCard: React.FC<IProps> = ({ title, desc, img }) => {
   const urlName = title.toLowerCase().replace(/\s/g, "-");
   return (
-    <div className="card-wrapper">
+    <div className="learn-card-wrapper">
       <div className="card-body">
         <div className="card-header">
           <img className="card-img" src={img} alt="" />

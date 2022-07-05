@@ -1,4 +1,4 @@
-.card-wrapper{
+.learn-card-wrapper{
     width: 264px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding-bottom: 18px;
 }
-.card-wrapper:hover{
+.learn-card-wrapper:hover{
     transform: scale(1.04);
 }
 
