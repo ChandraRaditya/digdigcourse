@@ -2,15 +2,14 @@ import './index.css';
 import {Link} from 'react-router-dom';
 
 interface IProps {
-  desc: string;
   link: string;
 }
 
-const Button: React.FC<IProps> = ({ desc, link }) => {
+const Button: React.FC<IProps> = ({ link }) => {
 
 
   return (
-      <Link className='btn' to={link}>{desc}</Link>
+      <Link className='btn' to={link}>selengkapnya</Link>
   );
 }
 export default Button;

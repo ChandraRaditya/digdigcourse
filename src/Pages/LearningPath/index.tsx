@@ -1,4 +1,6 @@
 import './index.css';
+import React from 'react';
+// import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -19,6 +21,7 @@ export const Cardcourse = () => {
 
   const numId = Number(id);
   const track = Track.find(track => track.id === numId);
+
   return (
       <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'center' }}>
         {track?.course.map(function (course) {
@@ -42,7 +45,7 @@ export const Cardcourse = () => {
                 </Stack>
               </CardContent>
               <CardActions sx={{ padding: 0 }}>
-                <Button desc={'Mulai belajar'} link={`/course/${course.id}`} />
+                <Button link={`/course/${course.id}`} />
               </CardActions>
             </Box>
           </Card>

@@ -1,9 +1,16 @@
+import React from 'react'; 
 import './index.css';
+// import { useEffect, useState } from 'react';
 import LearnPathCard from "../../Component/LearningPathListCard";
 import Banner from "../../Assets/Images/BannerLearnPath.png";
-import Track  from "../../Component/Data";
+import Data from "../../Component/Data";
 
 function LearningPathCollection() {
+  // const [value, setValue] = useState(
+  //   JSON.parse(localStorage.getItem('DataCourse') || ''
+  // ))
+  // console.log(value)
+
   return (
     <div className='learning-path-wrapper'>
       <div className="banner">
@@ -11,7 +18,7 @@ function LearningPathCollection() {
       </div>
       <h1>Learning Path List</h1>
       <div className="learning-path-list-wrapper">
-        {Track.map((item) => (
+        {Data.map((item) => (
           <LearnPathCard
             title={item.name}
             desc={item.description}
