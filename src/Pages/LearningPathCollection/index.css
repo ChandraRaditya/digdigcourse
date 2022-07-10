@@ -10,14 +10,24 @@
     margin: 64px 0px 100px 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* border: 1px solid #000; */
 } 
 
 .learning-path-banner .banner-img{
-    margin-top: 50px;
-    width: 1215px;
-    height: 599px;
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
     margin-bottom: 50px;
 }
 
 /* ====Respondsive =====*/
+
+@media screen and (max-width: 768px) {
+    .learning-path-banner .banner-img{
+        width: 80%;
+    }
+    .learning-path-list-wrapper{
+        margin: 64px 0px 100px 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}

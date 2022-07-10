@@ -17,10 +17,6 @@ export const Cardcourse = () => {
   const { id } = useParams<{ id?: string | undefined }>();
   const [course, setCourse] = useState<List[] | undefined>([]);
   const data = localStorage.getItem("obj");
-  // const currentId = useSelector((state: any) => state.id.value);
-  // console.log("ini id dari redux", currentId);
-  // console.log("ini id dari url", id);
-  // console.log("ini path", url);
 
   useEffect(() => {
     setCourse(getListData());

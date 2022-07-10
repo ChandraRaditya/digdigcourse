@@ -52,3 +52,8 @@
 
 /* ====Respondsive =====*/
 
+@media screen and (max-width: 768px) {
+    .learn-card-wrapper{
+        margin-bottom: 30px;
+    }
+}
