@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { answerQuizQuery } from "../../Redux/sliceAnswerQuiz";
+import ButtonPagination from "../ButtonPagination";
 
 function CourseQuizContent() {
   const { idMaterial } = useParams<ParamTypes>();
@@ -23,6 +24,7 @@ function CourseQuizContent() {
 
   useEffect(() => {
     dispatch(answerQuizQuery(""));
+    window.scrollTo(0, 0);
   }, [dispatch, idMaterial]);
 
   useEffect(() => {
@@ -63,6 +65,10 @@ function CourseQuizContent() {
         <button onClick={handleSubmit} className="btn-submit">
           Submit
         </button>
+      </div>
+      <div className="button-page-container">
+        <ButtonPagination />
+        <ButtonPagination />
       </div>
     </div>
   );

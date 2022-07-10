@@ -1,8 +1,9 @@
 import "./index.css";
-import { Link } from "react-router-dom";
 import { ParamTypes, Materials } from "../../Helper/interface";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ButtonPagination from "../ButtonPagination";
+import { useEffect } from "react";
 
 function CourseReadContent() {
   const { idMaterial } = useParams<ParamTypes>();
@@ -14,6 +15,10 @@ function CourseReadContent() {
     (data: any) => data.id === idMaterial
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="course-description">
       <h1 className="course-description-title">
@@ -22,10 +27,9 @@ function CourseReadContent() {
       <p className="course-read-content" style={{ fontSize: "24px" }}>
         {getContentCourse?.[0]?.content}
       </p>
-      <div className="course-action">
-        <Link to="/question" className="btn-course-action">
-          Selanjutnya
-        </Link>
+      <div className="button-page-container">
+        <ButtonPagination />
+        <ButtonPagination />
       </div>
     </div>
   );

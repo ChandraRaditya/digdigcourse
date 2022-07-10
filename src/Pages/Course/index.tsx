@@ -32,7 +32,9 @@ function Course() {
     return <ButtonCourse key={id} title={data.title} idMaterials={data.id} />;
   });
 
-  console.log("isi moduleMaterials", moduleMaterials);
+  const totalMaterialNumber = currentData.length;
+
+  console.log("isi moduleMaterials", totalMaterialNumber);
 
   const contentCourse =
     getContentCourse?.[0]?.type === "article" ? (
