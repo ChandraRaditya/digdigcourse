@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
 import "./index.css";
 
-const ButtonPagination = () => {
+export interface button {
+  desc: string;
+  idMaterial: string;
+}
+
+const ButtonPagination: React.FC<button> = ({ desc, idMaterial }) => {
+  const idMaterialInNumber = parseInt(idMaterial);
   return (
-    <Link to="/question" className="btn-course-action">
-      Selanjutnya
+    <Link
+      to={
+        desc === "Kembali"
+          ? `${idMaterialInNumber - 1}`
+          : `${idMaterialInNumber + 1}`
+      }
+      className="btn-course-action"
+      style={desc === "Selanjutnya" ? { marginLeft: "auto" } : { margin: 0 }}
+    >
+      {desc}
     </Link>
   );
 };
