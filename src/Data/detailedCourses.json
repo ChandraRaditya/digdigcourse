@@ -6,7 +6,7 @@
             "imgUrl": "https://firebasestorage.googleapis.com/v0/b/digdigcourse.appspot.com/o/Course%2Fhtml.jpg?alt=media&token=82a42732-9d01-43ec-8d62-3f218eefe319",
             "courseName": "HTML",
             "level": "pemula",
-            "hours": "16",
+            "hours": "20",
             "about": "Di kelas ini, kita akan belajar bagaimana membuat sebuah website dari awal dengan menggunakan HTML. Dengan HTML, kita bisa membuat struktur dan kerangka sebuah website yang terdiri dari beberapa element. HTML juga berfungsi sebagai penampil konten pada website kita.",
             "requirement": [
                 "Laptop macbook pro",
@@ -32,7 +32,7 @@
             "imgUrl": "path/to/img.jpg",
             "courseName": "aws cloud",
             "level": "pemula",
-            "hours": "16",
+            "hours": "20",
             "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare eros egestas odio auctor, in malesuada dui imperdiet. Curabitur faucibus rhoncus justo nec mattis. Nunc hendrerit ante urna, quis tempus elit dictum nec. Donec auctor odio quis lacus ultricies vehicula. Maecenas rhoncus commodo blandit. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis hendrerit ullamcorper neque. In hendrerit tristique vehicula.",
             "requirement": [
                 "Laptop macbook pro",
