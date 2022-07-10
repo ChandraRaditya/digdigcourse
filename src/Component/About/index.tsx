@@ -7,8 +7,8 @@ const About = () => {
     (state: any) => state.detailedCoursesData.value
   );
 
-  const preparation = currentData?.requirement?.map((val: any) => {
-    return <li>{val}</li>;
+  const preparation = currentData?.requirement?.map((val: any, id) => {
+    return <li key={id}>{val}</li>;
   });
   return (
     <div className="course-detail-card-wrapper">
