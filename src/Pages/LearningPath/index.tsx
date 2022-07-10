@@ -45,9 +45,10 @@ export const Cardcourse = () => {
         alignItems: "center",
       }}
     >
-      {courseListData?.map((data: Course) => {
+      {courseListData?.map((data: Course, id) => {
         return (
           <Card
+            key={id}
             sx={{
               display: "flex",
               width: "50%",

@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { answerQuizQuery } from "../../Redux/sliceAnswerQuiz";
+import ButtonPagination from "../ButtonPagination";
 
 function CourseQuizContent() {
   const { idMaterial } = useParams<ParamTypes>();
@@ -23,11 +24,35 @@ function CourseQuizContent() {
 
   useEffect(() => {
     dispatch(answerQuizQuery(""));
+    window.scrollTo(0, 0);
   }, [dispatch, idMaterial]);
 
   useEffect(() => {
     setKeyAnswer(getContentCourse?.[0]?.correctAnswer);
   }, [idMaterial, getContentCourse, currentAnswer]);
+
+  const buttonDesc = ["Kembali", "Selanjutnya"];
+
+  const onlyNextButton = buttonDesc.slice(1, 2).map((val, id) => {
+    return <ButtonPagination key={id} desc={val} idMaterial={idMaterial} />;
+  });
+
+  const onlyPrevButton = buttonDesc.slice(0, 1).map((val, id) => {
+    return <ButtonPagination key={id} desc={val} idMaterial={idMaterial} />;
+  });
+
+  const allButton = buttonDesc.map((val, id) => {
+    return <ButtonPagination key={id} desc={val} idMaterial={idMaterial} />;
+  });
+
+  const lastMaterial = currentData?.[currentData?.length - 1]?.id;
+  const firstMaterial = currentData?.[0]?.id;
+  const buttonNextPrev =
+    firstMaterial === idMaterial
+      ? onlyNextButton
+      : lastMaterial === idMaterial
+      ? onlyPrevButton
+      : allButton;
 
   const multipleChooice = getContentCourse?.[0]?.listOfAnswer?.map(
     (data, id) => {
@@ -64,6 +89,7 @@ function CourseQuizContent() {
           Submit
         </button>
       </div>
+      <div className="button-page-container">{buttonNextPrev}</div>
     </div>
   );
 }

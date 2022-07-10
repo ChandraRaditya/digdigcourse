@@ -14,9 +14,10 @@ function LearningPathCollection() {
     window.scrollTo(0, 0);
   }, [data]);
 
-  const LearningPathList = learningPath?.map((item) => {
+  const LearningPathList = learningPath?.map((item, id) => {
     return (
       <LearnPathCard
+        key={id}
         title={item.learningPathName}
         desc={item.info}
         img={item.imgUrl}

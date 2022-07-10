@@ -1,0 +1,8 @@
+.btn-course-action{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #fff;
+    background: #5779F1;
+}
