@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import About from "../../Component/About";
+import ErrorCard from "../../Component/ErrorCard";
 import Materi from "../../Component/Materi";
 import { getCourseDetailData } from "../../Helper/getData";
 import { Cours, ParamTypes } from "../../Helper/interface";
@@ -17,20 +18,20 @@ const CourseDetail = () => {
   const pathName = id?.replace(/-/g, "").toLowerCase();
   const data = localStorage.getItem("obj");
 
-  // console.log("ini dari redux", currentData.courseName);
-
   useEffect(() => {
-    // dispatch(detailedCoursesQuery(getCourseDetailData()));
     const getCourseData = getCourseDetailData();
     const pathName = id?.replace(/-/g, "").toLowerCase();
     const coursesDetail = getCourseData?.filter(
       (data: any) =>
         data.courseName.replace(/\s/g, "").toLowerCase() === pathName
     );
-    // console.log("ini var getdata", coursesDetail?.[0].courseName);
     dispatch(detailedCoursesQuery(coursesDetail?.[0]));
     window.scrollTo(0, 0);
   }, [data, dispatch, id]);
+
+  if (currentData === undefined) {
+    return <ErrorCard />;
+  }
 
   return (
     <div>

@@ -17,10 +17,6 @@ export const Cardcourse = () => {
   const { id } = useParams<{ id?: string | undefined }>();
   const [course, setCourse] = useState<List[] | undefined>([]);
   const data = localStorage.getItem("obj");
-  // const currentId = useSelector((state: any) => state.id.value);
-  // console.log("ini id dari redux", currentId);
-  // console.log("ini id dari url", id);
-  // console.log("ini path", url);
 
   useEffect(() => {
     setCourse(getListData());
@@ -29,12 +25,12 @@ export const Cardcourse = () => {
 
   const pathName = id?.replace(/-/g, "").toLowerCase();
 
-  //perlu perbaikan di type courseListnya
   const coursesList = course?.filter(
     (data) =>
       data.learningPathName.replace(/\s/g, "").toLowerCase() === pathName
   );
   const courseListData = coursesList?.[0]?.courses;
+
   return (
     <Box
       sx={{
@@ -80,7 +76,7 @@ export const Cardcourse = () => {
                   padding: 0,
                 }}
               >
-                <Typography variant="h4" gutterBottom component="div">
+                <Typography variant="h5" gutterBottom component="div">
                   {data.courseName}
                 </Typography>
                 <Stack direction="row" spacing={2}>
