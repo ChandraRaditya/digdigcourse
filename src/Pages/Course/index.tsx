@@ -1,4 +1,3 @@
-// <<<<<<< HEAD
 import CourseQuizContent from "../../Component/CourseQuizContent";
 import ButtonCourse from "../../Component/ButtonCourse";
 import "./index.css";
