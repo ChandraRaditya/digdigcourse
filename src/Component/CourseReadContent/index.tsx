@@ -47,9 +47,11 @@ function CourseReadContent() {
         <h1 className="course-description-title">
           {getContentCourse?.[0]?.title}
         </h1>
-        <p className="course-read-content" style={{ fontSize: "24px" }}>
-          {getContentCourse?.[0]?.content}
-        </p>
+        <p
+          className="course-read-content"
+          style={{ fontSize: "24px" }}
+          dangerouslySetInnerHTML={{ __html: getContentCourse?.[0]?.content }}
+        />
       </div>
       <div className="button-page-container">{buttonNextPrev}</div>
     </div>
