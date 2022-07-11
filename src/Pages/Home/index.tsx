@@ -1,6 +1,6 @@
 import "./index.css";
 import CardHome from "../../Component/CardHome";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getListData } from "../../Helper/getData";
 import { List } from "../../Helper/interface";
 import bottomImage from "../../Assets/Images/home-content.jpg";
@@ -17,8 +17,6 @@ function Home() {
     dispatch(learningPathQuery(getListData()));
   }, [data, dispatch]);
 
-  // console.log("ini redux baru", currentData);
-
   const cardContent = currentData?.map((x: List) => {
     return (
       <CardHome
@@ -29,7 +27,7 @@ function Home() {
         level={x.level}
         id={x.id}
         imgUrl={x.imgUrl}
-        courses={x.courses} // courseCount={x.courses.length}
+        courses={x.courses}
       />
     );
   });

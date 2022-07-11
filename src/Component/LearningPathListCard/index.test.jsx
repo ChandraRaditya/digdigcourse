@@ -10,7 +10,6 @@ test("LearnPathCard rendered", () => {
       <LearnPathCard />
     </BrowserRouter>
   );
-  //
   const image = screen.getByRole("img");
   expect(image).toBeInTheDocument();
 

@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { Router } from "react-router-dom";
 import React from "react";
 
-test("simulate button", async () => {
+test("simulate button Link", async () => {
   const historys = createMemoryHistory();
   render(
     <Router history={historys}>
